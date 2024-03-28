@@ -1,3 +1,4 @@
+import { Header } from "@/components/header";
 import "./globals.css";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className="m-0">{children}</body>
+      <body className="m-0">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
