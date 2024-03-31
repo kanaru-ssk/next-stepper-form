@@ -1,18 +1,22 @@
 import { RadioCard } from "@/components/radio-card";
 import { RadioGroup } from "@/components/radio-group";
-import { FormControl } from "@mui/material";
+import { Box, FormControl, Grid } from "@mui/material";
+import { jobs } from "@/constants/jobs";
 
 export function RadioCardForm() {
   return (
-    <FormControl>
-      <RadioGroup defaultValue={"a"}>
-        <RadioCard value="a">aaa</RadioCard>
-        <RadioCard value="b">bbb</RadioCard>
-        <RadioCard value="c">ccc</RadioCard>
-      </RadioGroup>
-    </FormControl>
+    <Box className="flex justify-center">
+      <FormControl className="w-full">
+        <RadioGroup className="grid grid-cols-2 gap-3">
+          {jobs.map(({ id, name }) => (
+            <RadioCard key={id} value={name}>
+              {name}
+            </RadioCard>
+          ))}
+        </RadioGroup>
+      </FormControl>
+    </Box>
   );
 }
 
 // TODO: ラベルが青くなる問題
-// TODO: radio-cardにfocus当たる問題の解消
