@@ -18,7 +18,7 @@ export function RadioCard({ value, children }: Props) {
   return (
     <Box sx={{ width: 275 }}>
       <Card variant="outlined">
-        <CardActionArea>
+        <CardActionArea tabIndex={-1}>
           <FormLabel>
             <CardContent>{children}</CardContent>
             <CardActions>
