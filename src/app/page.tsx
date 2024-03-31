@@ -7,6 +7,3 @@ export default function Home() {
     </main>
   );
 }
-
-// TODO: ラベルが青くなる問題
-// TODO: RadioCardがtabで選択できない問題
