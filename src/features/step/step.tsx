@@ -4,7 +4,7 @@ import { useStep } from "@/features/step/use-step";
 import { Stepper } from "@/components/stepper";
 import { Button } from "@/components/button";
 import { steps } from "@/constants/steps";
-import { RadioCardForm } from "../radio-card-form.tsx";
+import { FormSwitcher } from "./form-switcher";
 
 export function Step() {
   const { currentStep, nextStep, prevStep } = useStep({ length: steps.length });
@@ -13,7 +13,7 @@ export function Step() {
     <div>
       <Stepper steps={steps} currentStep={currentStep} />
       <div className="py-10">
-        <StepInner currentStep={currentStep} />
+        <FormSwitcher currentStep={currentStep} />
       </div>
       <div className="flex justify-between">
         <Button onClick={prevStep} variant="outlined">
@@ -25,13 +25,4 @@ export function Step() {
       </div>
     </div>
   );
-}
-
-type StepInnerProps = {
-  currentStep: number;
-};
-
-function StepInner({ currentStep }: StepInnerProps) {
-  if (currentStep === 0) return <RadioCardForm />;
-  return null;
 }
