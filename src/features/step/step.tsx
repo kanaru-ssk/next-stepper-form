@@ -2,9 +2,9 @@
 
 import { Button } from "@/components/button";
 import { Stepper } from "@/components/stepper";
-import { steps } from "@/constants/steps";
 import { useStep } from "@/features/step/use-step";
 import { FormSwitcher } from "./form-switcher";
+import { steps } from "./steps";
 
 export function Step() {
   const {
