@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className="m-0">
+      <body className="relative m-0 min-h-screen">
         <Header />
         {children}
         <Footer />
