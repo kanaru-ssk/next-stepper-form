@@ -6,12 +6,20 @@ type Props = {
 
 export function useStep({ length }: Props) {
   const [currentStep, setCurrentStep] = useState(0);
+  const disabledNextStep = currentStep >= length;
+  const disabledPrevStep = currentStep <= 0;
   function nextStep() {
-    setCurrentStep((prev) => (prev < length - 1 ? prev + 1 : prev));
+    setCurrentStep((prev) => (prev < length ? prev + 1 : prev));
   }
   function prevStep() {
-    setCurrentStep((prev) => (0 < prev ? prev - 1 : 0));
+    setCurrentStep((prev) => (prev > 0 ? prev - 1 : 0));
   }
 
-  return { currentStep, nextStep, prevStep };
+  return {
+    currentStep,
+    disabledNextStep,
+    disabledPrevStep,
+    nextStep,
+    prevStep,
+  };
 }

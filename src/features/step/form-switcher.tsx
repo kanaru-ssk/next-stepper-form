@@ -6,5 +6,7 @@ type Props = {
 
 export function FormSwitcher({ currentStep }: Props) {
   if (currentStep === 0) return <RadioCardForm />;
-  return null;
+  if (currentStep === 1) return <div>step 2</div>;
+  if (currentStep === 2) return <div>step 3</div>;
+  return <div>complete</div>;
 }
