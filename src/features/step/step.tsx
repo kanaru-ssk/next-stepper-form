@@ -7,7 +7,13 @@ import { steps } from "@/constants/steps";
 import { FormSwitcher } from "./form-switcher";
 
 export function Step() {
-  const { currentStep, nextStep, prevStep } = useStep({ length: steps.length });
+  const {
+    currentStep,
+    disabledNextStep,
+    disabledPrevStep,
+    nextStep,
+    prevStep,
+  } = useStep({ length: steps.length });
 
   return (
     <div>
@@ -16,10 +22,18 @@ export function Step() {
         <FormSwitcher currentStep={currentStep} />
       </div>
       <div className="flex justify-between">
-        <Button onClick={prevStep} variant="outlined">
+        <Button
+          onClick={prevStep}
+          variant="outlined"
+          disabled={disabledPrevStep}
+        >
           prev
         </Button>
-        <Button onClick={nextStep} variant="contained">
+        <Button
+          onClick={nextStep}
+          variant="contained"
+          disabled={disabledNextStep}
+        >
           next
         </Button>
       </div>
