@@ -6,6 +6,9 @@ const config: Config = {
   theme: {
     extend: {
       colors,
+      fontFamily: {
+        sans: ["var(--font-noto-sans-jp)"],
+      },
     },
   },
   corePlugins: {
