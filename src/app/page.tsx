@@ -5,7 +5,7 @@ import { FormControl } from "@mui/material";
 
 export default function Home() {
   return (
-    <main className="px-5 py-10 max-w-4xl mx-auto">
+    <main className="mx-auto max-w-4xl px-5 py-10">
       <Stepper steps={[{ id: 0 }, { id: 1 }, { id: 2 }]} activeStep={1} />
       <div className="p-10">
         <FormControl>
