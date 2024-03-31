@@ -5,12 +5,12 @@ type Props = {
     id: number;
     label?: string;
   }[];
-  activeStep: number;
+  currentStep: number;
 };
 
-export function Stepper({ steps, activeStep }: Props) {
+export function Stepper({ steps, currentStep }: Props) {
   return (
-    <MuiStepper activeStep={activeStep} alternativeLabel>
+    <MuiStepper activeStep={currentStep} alternativeLabel>
       {steps.map(({ id, label }) => (
         <Step key={id}>
           <StepLabel>{label}</StepLabel>
