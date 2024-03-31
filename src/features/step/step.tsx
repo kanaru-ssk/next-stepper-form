@@ -1,9 +1,9 @@
 "use client";
 
-import { useStep } from "@/features/step/use-step";
-import { Stepper } from "@/components/stepper";
 import { Button } from "@/components/button";
+import { Stepper } from "@/components/stepper";
 import { steps } from "@/constants/steps";
+import { useStep } from "@/features/step/use-step";
 import { FormSwitcher } from "./form-switcher";
 
 export function Step() {

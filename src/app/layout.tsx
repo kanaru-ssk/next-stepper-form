@@ -1,7 +1,8 @@
+import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
-import "./globals.css";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "next-lp",
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body className="m-0">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
