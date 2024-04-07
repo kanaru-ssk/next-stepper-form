@@ -16,7 +16,7 @@ type Props = {
 
 export function RadioCard({ value, children }: Props) {
   return (
-    <Box sx={{ width: 275 }}>
+    <Box className="w-full">
       <Card variant="outlined">
         <CardActionArea tabIndex={-1}>
           <FormLabel>
